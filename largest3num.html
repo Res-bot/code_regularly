@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter first value: <input type="text" id="in1">
+    Enter second value: <input type="text" id="in2">
+    Enter third value: <input type="text" id="in3">
+    <button onclick="large()">Find largest</button>
+    <p id="result"></p>
+
+    <script>
+        let val1 = document.getElementById("in1")
+        let val2= document.getElementById("in2")
+        let val3 = document.getElementById("in3")
+        let res1 = document.getElementById("result")
+
+        function large(){
+            let val1a = val1.value
+            let val1b = parseInt(val1a)
+            let val2a = val2.value
+            let val2b = parseInt(val2a)
+            let val3a = val3.value
+            let val3b = parseInt(val3a)
+
+
+            if(val1b > val2b && val1b>val3b){
+                res1.innerHTML = "the largest value is : " + val1b
+            } else if(val2b > val1b && val2b > val3b){
+                res1.innerHTML = "the largest value is : " + val2b
+            }else{
+                res1.innerHTML = "the largest value is: " + val3b
+            }
+        }
+    </script>
+</body>
+</html>
